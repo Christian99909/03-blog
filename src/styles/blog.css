@@ -25,5 +25,5 @@ p {
 }
 
 a {
-    @apply text-blue-500 hover:underline;
+    @apply text-white hover:underline;
 }
