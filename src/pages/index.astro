@@ -2,7 +2,7 @@
 import type { ACTION_ERROR_CODES } from "astro:actions";
 import BlogPost from "../components/BlogPost.astro";
 import { siteConfig } from "../config/site-config";
-import MainLayout from "./layouts/MainLayout.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 
 const posts = await Astro.glob("./posts/*.{md, mdx}");
 ---

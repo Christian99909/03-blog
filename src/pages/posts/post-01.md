@@ -8,7 +8,7 @@ image: '/assets/images/post-01.png'
 tags: [JavaScript, ES6, Programming]
 
 
-layout: ../layouts/BlogLayout.astro
+layout: ../../layouts/BlogLayout.astro
 ---
 
 # Explorando Funciones de ES6
