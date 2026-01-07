@@ -8,16 +8,14 @@ const blogCollection = defineCollection({
         title: z.string(),
         date: z.date(),
         description: z.string(),
-        image: image().refine(img => img.width < 2200, {
-            message: 'La imagen debe ser menor a 1200px',
-        }),
+        image: image(),
 
         //Relaciones
         author: z.string(),
 
         //Relaciones
         tags: z.array(z.string()),
-    })
+    }),
 });
 
 
