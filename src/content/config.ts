@@ -1,4 +1,4 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection, reference, z } from "astro:content";
 
 
 
@@ -11,7 +11,8 @@ const blogCollection = defineCollection({
         image: image(),
 
         //Relaciones
-        author: z.string(),
+        // author: z.string(),
+        author: reference('author'),
 
         //Relaciones
         tags: z.array(z.string()),
