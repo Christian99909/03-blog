@@ -1,6 +1,7 @@
 ---
 import type { GetStaticPaths } from "astro";
 import { Image } from "astro:assets";
+import { getEntry } from "astro:content";
 import { getCollection } from "astro:content";
 import BlogLayout from "src/layouts/BlogLayout.astro";
 
@@ -24,6 +25,8 @@ const { post } = Astro.props;
 const frontmatter = post.data;
 
 const { Content, headings } = await post.render();
+
+const author = await getEntry("author", post.data.author.id);
 ---
 
 <BlogLayout title={frontmatter.title}>
