@@ -26,7 +26,7 @@ const frontmatter = post.data;
 
 const { Content, headings } = await post.render();
 
-const author = await getEntry("author", post.data.author.id);
+const author = (await getEntry("author", post.data.author.id))?.data;
 ---
 
 <BlogLayout title={frontmatter.title}>
@@ -35,8 +35,8 @@ const author = await getEntry("author", post.data.author.id);
 
     <div>
         <Image
-            src={author.data.avatar}
-            alt={author.data.name}
+            src={author.avatar}
+            alt={author.name}
             width={40}
             height={40}
             class="rounded-full"
