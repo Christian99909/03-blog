@@ -31,7 +31,17 @@ const author = await getEntry("author", post.data.author.id);
 
 <BlogLayout title={frontmatter.title}>
     <h1 class="text-xs text-gray-500 mb-0">{frontmatter.title}</h1>
-    <h4 class="text-md text-gray-400 mb-0">{frontmatter.author}</h4>
+    <!-- <h4 class="text-md text-gray-400 mb-0">{frontmatter.author}</h4> -->
+
+    <div>
+        <Image
+            src={author.data.avatar}
+            alt={author.data.name}
+            width={40}
+            height={40}
+            class="rounded-full"
+        />
+    </div>
 
     <!-- Image -->
     <!-- width 600, height 220 -->
